@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Branch Locations - Bank of Stepford</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b1975;
+      --secondary: #e83b3b;
+      --light-bg: #f5f8fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      background: var(--secondary);
+      color: white;
+      text-align: right;
+      padding: 0.5rem 2rem;
+      width: 100%;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    .branch-container {
+      padding: 2rem;
+      width: 90%;
+      margin: 2rem auto;
+      max-width: 1000px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .branch-container h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .branch-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .branch-card .branch-info {
+      flex: 1;
+    }
+
+    .branch-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .branch-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .branch-info p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .branch-info .branch-phone, .branch-info .branch-email {
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 100%;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="index.html">Home</a>
+  </div>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="https://i.ibb.co/ycbwnybb/image.png" alt="Bank of Stepford Logo">
+  </header>
+
+  <!-- Branch Locations Section -->
+  <div class="branch-container">
+    <h2>Our Branch Locations</h2>
+
+    <!-- Branch 1 -->
+    <div class="branch-card">
+      <div class="branch-info">
+        <h3>Stepford Town Centre</h3>
+        <p><strong>Address:</strong> 45 High Street, Stepford Town, ST1 2AB</p>
+        <p><strong>Phone:</strong> <span class="branch-phone">+489 1234 567890</span></p>
+        <p><strong>Email:</strong> <span class="branch-email">stepfordtown@stepfordbank.com</span></p>
+      </div>
+      <img src="https://i.ibb.co/QWxf3Gr/image.png" alt="Branch Image">
+    </div>
+
+    <!-- Branch 2 -->
+    <div class="branch-card">
+      <div class="branch-info">
+        <h3>Willowfield</h3>
+        <p><strong>Address:</strong> 82 East Road, Willowfield, ST26 3CD</p>
+        <p><strong>Phone:</strong> <span class="branch-phone">+489 9876 543210</span></p>
+        <p><strong>Email:</strong> <span class="branch-email">willowfield@stepfordbank.com</span></p>
+      </div>
+      <img src="https://i.ibb.co/sdp1zFCg/image.png" alt="Branch Image">
+    </div>
+
+    <!-- Branch 3 -->
+    <div class="branch-card">
+      <div class="branch-info">
+        <h3>Berrily</h3>
+        <p><strong>Address:</strong> 98 Singerton Street, Berrily, BR1 1GH</p>
+        <p><strong>Phone:</strong> <span class="branch-phone">+489 2345 678910</span></p>
+        <p><strong>Email:</strong> <span class="branch-email">berrily@stepfordbank.com</span></p>
+      </div>
+      <img src="https://i.ibb.co/mr7PRCCS/image.png" alt="Branch Image">
+    </div>
+
+    <!-- Branch 4 -->
+    <div class="branch-card">
+      <div class="branch-info">
+        <h3>Llyn</h3>
+        <p><strong>Address:</strong> 5 Station Road, Llyn-by-the-Sea, LY5 6UU</p>
+        <p><strong>Phone:</strong> <span class="branch-phone">+489 3456 789012</span></p>
+        <p><strong>Email:</strong> <span class="branch-email">llyn@stepfordbank.com</span></p>
+      </div>
+      <img src="https://i.ibb.co/4Rsy74Hk/image.png" alt="Branch Image">
+    </div>
+
+    <!-- Branch 5 -->
+    <div class="branch-card">
+      <div class="branch-info">
+        <h3>Leighton</h3>
+        <p><strong>Address:</strong> 99B Mayfair Avenue, Leighton City, LT4 7YU</p>
+        <p><strong>Phone:</strong> <span class="branch-phone">+489 4567 890123</span></p>
+        <p><strong>Email:</strong> <span class="branch-email">leighton@stepfordbank.com</span></p>
+      </div>
+      <img src="https://i.ibb.co/7Nvj7t6h/image.png" alt="Branch Image">
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Bank of Stepford Ltd © 2025</p>
+    <p>Email: support@stepfordbank.com | Phone: 0800 125 3461 or +489 72341 34922</p>
+	<p>24 hours Lost/Stolen Card: 04836 1823743 or +489 2356 23621</p>
+  </footer>
+
+</body>
+</html>
