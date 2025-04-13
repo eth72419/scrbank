@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Bank of Stepford</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b1975;
+      --secondary: #e83b3b;
+      --light-bg: #f5f8fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      background: var(--secondary);
+      color: white;
+      text-align: right;
+      padding: 0.5rem 2rem;
+      width: 100%;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 350px; /* Fixed width */
+      max-width: 100%; /* Ensure it doesn't stretch beyond the container */
+      text-align: center;
+      margin-top: 2rem;
+      margin-left: 10%;
+      margin-right: 10%;
+      height: 350px; /* Set a fixed height */
+      overflow-y: auto; /* Allows for scroll if content exceeds the height */
+    }
+
+    .login-container h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .login-btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+    }
+
+    .login-btn:hover {
+      background-color: var(--secondary);
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 1rem;
+    }
+
+    .scam-tips {
+      background-color: #fff9e6;
+      border-left: 5px solid #e83b3b;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #333;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: left;
+      margin-bottom: 2rem; /* Add margin-bottom to separate from the footer */
+    }
+
+    .scam-tips ul {
+      padding-left: 1rem;
+      list-style-position: inside;
+    }
+
+    .credit-card-promotion {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 2rem;
+      margin-left: 5%;
+      margin-top: 2rem;
+    }
+
+    .credit-card-promotion img {
+      width: 350px; /* Adjust the image width to match the login box size */
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 100%;
+      margin-top: auto; /* Ensure the footer stays at the bottom */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="main.html">Home</a>
+  </div>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="https://i.ibb.co/ycbwnybb/image.png" alt="Bank of Stepford Logo">
+    <h1>Bank of Stepford</h1>
+  </header>
+
+  <!-- Login Section (Left) and Credit Card Promotion (Right) -->
+  <div style="display: flex; justify-content: center; padding-top: 2rem;">
+    <!-- Login Form -->
+    <div class="login-container">
+      <h2>Login to Bank of Stepford</h2>
+      <form id="login-form">
+        <input type="text" id="username" class="input-field" placeholder="Username" required />
+        <input type="password" id="password" class="input-field" placeholder="Password" required />
+        <button type="submit" class="login-btn">Login</button>
+        <p class="error-message" id="error-message"></p>
+      </form>
+    </div>
+
+    <!-- Credit Card Promotion -->
+    <div class="credit-card-promotion">
+      <img src="https://i.ibb.co/zh4Kb8Xk/image.png" alt="Credit Card Promotion 1">
+    </div>
+  </div>
+
+  <!-- Scam Prevention Tips -->
+  <div class="scam-tips">
+    <h3>Scam Prevention Tips:</h3>
+    <ul>
+      <li>Never share your login credentials with anyone.</li>
+      <li>Ensure the website URL begins with <strong>https://</strong> before entering any personal information.</li>
+      <li>Be cautious of unsolicited emails or messages asking for sensitive information.</li>
+      <li>We will never ask you for personal information via email or phone.</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <<footer>
+    <p>Bank of Stepford Ltd © 2025</p>
+    <p>Email: support@stepfordbank.com | Phone: 0800 125 3461 or +489 72341 34922</p>
+	<p>24 hours Lost/Stolen Card: 04836 1823743 or +489 2356 23621</p>
+  </footer>
+
+  <script>
+    // Set the login credentials you want
+    const validUsername = 'CharlineWoodhead'; // Change this
+    const validPassword = 'freightiscomingsoon'; // Change this
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if the entered credentials match
+      if (username === validUsername && password === validPassword) {
+        // Redirect to homepage or any other page after login
+        window.location.href = 'balance.html'; // Update the destination page here
+      } else {
+        // Show error message if credentials are incorrect
+        document.getElementById('error-message').textContent = 'Invalid username or password. Please try again.';
+      }
+    });
+  </script>
+
+</body>
+</html>
