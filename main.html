@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bank of Stepford</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b1975;
+      --secondary: #e83b3b;
+      --light-bg: #f5f8fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: #222;
+    }
+
+    .top-bar {
+      background: var(--secondary);
+      color: white;
+      text-align: right;
+      padding: 0.5rem 2rem;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    .slideshow {
+      position: relative;
+      max-width: 100%;
+      height: 300px;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 300px;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 10;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .content .visit-branch-button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .content .visit-branch-button:hover {
+      background-color: #c73030;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      gap: 1rem;
+      padding: 0 2rem;
+    }
+
+    .feature-box {
+      background-color: white;
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      width: 22%;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .feature-box p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="login.html">Login</a>
+  </div>
+
+  <header>
+    <img src="https://i.ibb.co/ycbwnybb/image.png" alt="Bank of Stepford Logo">
+  </header>
+
+  <div class="slideshow">
+    <div class="slides" id="slides">
+      <img src="https://www.btig.com/wp-content/uploads/2018/02/Financials-iStock-588610958.jpg" alt="Slide 1">
+      <img src="https://www.scantron.com/wp-content/uploads/2018/09/GettyImages-913326906-1600x900.jpg" alt="Slide 2">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" alt="Slide 3">
+    </div>
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <div class="content">
+    <h2>Welcome to the Future of Banking</h2>
+    <p>
+      At Bank of Stepford, we believe in security, simplicity, and service. Our modern online platform lets you manage your money wherever you are. From checking and savings to secure fund transfers and personal finance tools, we’ve got your back.
+    </p>
+
+    <!-- Button to visit branch location page -->
+    <a href="branchloc.html">
+      <button class="visit-branch-button">Visit Our Branch Locations</button>
+    </a>
+  </div>
+
+  <!-- New Feature Boxes -->
+  <div class="features">
+    <div class="feature-box">
+      <h3>Checking Accounts</h3>
+      <p>Manage your daily transactions with our flexible checking account options. Fast, secure, and easy access to your funds whenever you need them.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Savings Accounts</h3>
+      <p>Grow your wealth with our high-yield savings accounts. Enjoy competitive interest rates and the security of a trusted bank.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Loan Services</h3>
+      <p>Looking to buy a new home or car? Our loan services offer competitive rates and flexible repayment options to suit your needs.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Apply for a Credit Card</h3>
+      <p>Unlock the benefits of our exclusive credit cards, offering cashback, rewards, and low-interest rates. Apply today to get started!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Bank of Stepford Ltd © 2025</p>
+    <p>Email: support@stepfordbank.com | Phone: 0800 125 3461 or +489 72341 34922</p>
+	<p>24 hours Lost/Stolen Card: 04836 1823743 or +489 2356 23621</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>
