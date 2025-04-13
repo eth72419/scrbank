@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bank of Stepford</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b1975;
+      --secondary: #e83b3b;
+      --light-bg: #f5f8fc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-bar {
+      background: var(--secondary);
+      color: white;
+      text-align: right;
+      padding: 0.5rem 2rem;
+      width: 100%;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+
+    .account-box, .credit-card-box {
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 2rem auto;
+      width: 80%;
+      max-width: 600px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .account-box:hover, .credit-card-box:hover {
+      transform: scale(1.05);
+    }
+
+    .account-box h3, .credit-card-box h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .account-box p, .credit-card-box p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    /* Service Boxes */
+    .service-boxes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem auto;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .service-box {
+      background-color: white;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 30%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+
+    .service-box h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .service-box p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Button Styling */
+    .branch-btn {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .branch-btn:hover {
+      background-color: var(--secondary);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 100%;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <a href="index.html">Home</a>
+  </div>
+
+  <!-- Header with Logo -->
+  <header>
+    <img src="https://i.ibb.co/ycbwnybb/image.png" alt="Bank of Stepford Logo">
+  </header>
+
+  <!-- Account Balance Box (Clickable) -->
+  <a href="account_details.html">
+    <div class="account-box">
+      <h3>Account Balance</h3>
+      <p>Account Holder: Charline T. Woodhead</p>
+      <p>Bank Account Number: 1999999</p>
+      <p>Sort Code: 99-98-90</p>
+      <p>Balance: -£11,245.12 GBP</p>
+      <p>Owed: £4,000.00</p>
+      <p>Interest Rate: 100%</p>
+    </div>
+  </a>
+
+  <!-- Credit Card Box (Clickable) -->
+  <a href="credit_card.html">
+    <div class="credit-card-box">
+      <h3>Credit Card</h3>
+      <p>Apply for our exclusive Credit Card with 0% interest for the first 6 months!</p>
+    </div>
+  </a>
+
+  <!-- Service Boxes -->
+  <div class="service-boxes">
+    <div class="service-box">
+      <h4>Transfer Funds</h4>
+      <p>Transfer money to your friends or family instantly</p>
+      <p>You are not eligible for online banking due to advanced age. Speak to a member of staff in one of our branches</p>
+    </div>
+    <div class="service-box">
+      <h4>Apply for Loans</h4>
+      <p>Speak to a member of staff in one of our branches to discuss loan options; as your account needs verification</p>
+    </div>
+    <div class="service-box">
+      <h4>Apply for a Credit Card</h4>
+      <p>Speak to a member of staff in one of our branches to apply for your credit card; as your account needs verification</p>
+    </div>
+  </div>
+
+  <!-- Button to Branch Locations -->
+  <a href="branchloc.html" class="branch-btn">Visit Our Branch Locations</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>Bank of Stepford Ltd © 2025</p>
+    <p>Email: support@stepfordbank.com | Phone: 0800 125 3461 or +489 72341 34922</p>
+	<p>24 hours Lost/Stolen Card: 04836 1823743 or +489 2356 23621</p>
+  </footer>
+
+</body>
+</html>
